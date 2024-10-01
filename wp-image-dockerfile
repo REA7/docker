@@ -45,4 +45,4 @@ RUN service mysql start && \
 EXPOSE 80 
 
 
-CMD ["bash", "-c", "service apache2 start && service mysql start && tail -f /dev/null"]
+CMD ["bash", "-c", "service mysql start && apache2ctl -D FOREGROUND"]
